@@ -22,6 +22,8 @@ public class Chart extends BaseObject {
     private Integer marginLeft;
 
     private Integer marginTop;
+    
+    private Options3d options3d;
 
     public String getBackgroundColor() {
         return backgroundColor;
@@ -97,6 +99,14 @@ public class Chart extends BaseObject {
     public Chart setWidth(int width) {
         this.width = width;
         return this;
+    }
+    
+    public Chart setOptions3d(boolean enabled, Integer alpha) {
+    	Options3d options3d = new Options3d();
+    	options3d.setAlpha(alpha);
+    	options3d.setEnabled(true);
+    	this.options3d = options3d;
+    	return this;
     }
 
     public Chart setZoomType(String zoomType) {
