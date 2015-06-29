@@ -24,6 +24,12 @@ public class Series
     
     private Integer zIndex;
     
+    private Long pointStart;
+    
+    private Double pointInterval;
+    
+    private String pointIntervalUnit;
+    
     public Series style(
             final Series src) {
         super.style(src);
@@ -197,4 +203,31 @@ public class Series
         this.zIndex = zIndex;
         return this;
     }
+
+	public Long getPointStart() {
+		return pointStart;
+	}
+
+	public Series setPointStart(long pointStart) {
+		this.pointStart = pointStart;
+		return this;
+	}
+
+	public Double getPointInterval() {
+		return pointInterval;
+	}
+
+	public Series setPointInterval(Double pointInterval) {
+		this.pointInterval = pointInterval;
+		return this;
+	}
+
+	public String getPointIntervalUnit() {
+		return pointIntervalUnit;
+	}
+
+	public Series setPointIntervalUnit(String pointIntervalUnit) {
+		this.pointIntervalUnit = pointIntervalUnit;
+		return this;
+	}
 }
